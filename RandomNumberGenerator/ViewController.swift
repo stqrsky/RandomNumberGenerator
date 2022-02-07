@@ -10,6 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     
     let numbers = [Array(1...100), Array(1...100)]
+    
+    var startNumber = 25
+    var endNumber = 75
 
     //MARK: - Outlets
     
@@ -21,8 +24,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         picker.delegate = self
         picker.dataSource = self
+        
+        picker.selectRow(startNumber - 1, inComponent: 0, animated: true)
+        picker.selectRow(endNumber - 1, inComponent: 1, animated: true)
+        
     }
 
     @IBAction func chooseButtonTapped(_ sender: UIButton) {
