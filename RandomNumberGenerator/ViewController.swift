@@ -43,6 +43,14 @@ class ViewController: UIViewController {
 
 extension ViewController: UIPickerViewDelegate {
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if component == 0 {
+            startNumber = numbers[component][row]
+        } else if component == 1 {
+            endNumber = numbers[component][row]
+        }
+    }
+    
 }
 
 extension ViewController: UIPickerViewDataSource {
