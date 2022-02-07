@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Random No. Generator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQ1-gY-HKk">
-                                <rect key="frame" x="16" y="124" width="358" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random No. Generator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQ1-gY-HKk">
+                                <rect key="frame" x="25.333333333333343" y="124" width="339.33333333333326" height="45"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="32"/>
                                 <color key="textColor" red="0.28004916730000001" green="0.58245432750000004" blue="0.41660907320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -25,22 +25,7 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FP6-sB-xhE">
                                 <rect key="frame" x="0.0" y="269" width="390" height="216"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93F-QL-Ek2">
-                                <rect key="frame" x="28" y="740" width="334" height="50"/>
-                                <color key="backgroundColor" red="0.28004916730000001" green="0.58245432750000004" blue="0.41660907320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Wcf-mG-LiL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="20"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Choose number between 0 and 100">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cZZ-vN-1WF"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="77" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCf-e9-1Vx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCf-e9-1Vx">
                                 <rect key="frame" x="145" y="610" width="100" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="610-uW-ppj"/>
@@ -50,14 +35,32 @@
                                 <color key="textColor" red="0.22688036" green="0.47187231000000002" blue="0.33751364950000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93F-QL-Ek2">
+                                <rect key="frame" x="22" y="740" width="346" height="50"/>
+                                <color key="backgroundColor" red="0.28004916730000001" green="0.58245432750000004" blue="0.41660907320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Wcf-mG-LiL"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Choose number between 0 and 100">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cZZ-vN-1WF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="FP6-sB-xhE" firstAttribute="top" secondItem="dQ1-gY-HKk" secondAttribute="bottom" constant="100" id="8KA-E8-gsj"/>
+                            <constraint firstItem="93F-QL-Ek2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A75-mH-NdB"/>
                             <constraint firstItem="93F-QL-Ek2" firstAttribute="top" secondItem="kCf-e9-1Vx" secondAttribute="bottom" constant="80" id="ED1-nW-VNv"/>
                             <constraint firstItem="dQ1-gY-HKk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="GoG-93-lmB"/>
                             <constraint firstItem="kCf-e9-1Vx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cIt-ec-5Bz"/>
+                            <constraint firstItem="93F-QL-Ek2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="fdN-iu-JFI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="93F-QL-Ek2" secondAttribute="trailing" constant="22" id="g3M-kZ-shi"/>
+                            <constraint firstItem="dQ1-gY-HKk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gfm-SU-ZOM"/>
                             <constraint firstItem="FP6-sB-xhE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mgT-7W-Aul"/>
                             <constraint firstItem="FP6-sB-xhE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wNL-Fd-n7H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="93F-QL-Ek2" secondAttribute="bottom" constant="20" id="x4S-oV-SuV"/>

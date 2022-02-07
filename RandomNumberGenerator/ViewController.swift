@@ -36,7 +36,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func chooseButtonTapped(_ sender: UIButton) {
-        print("tapped")
+        if startNumber < endNumber {
+            let randomNumber = Int.random(in: startNumber...endNumber)
+            resultLabel.text = "\(randomNumber)"
+        }
+    }
+    
+    func setButton() {
+        
+        if startNumber < endNumber {
+            chooseButton.setTitle("Choose number between \(startNumber) and \(endNumber)", for: .normal)
+        } else {
+            chooseButton.setTitle("Attention! start number >= end number.", for: .normal)
+        }
+        
+        
     }
     
 }
@@ -49,6 +63,9 @@ extension ViewController: UIPickerViewDelegate {
         } else if component == 1 {
             endNumber = numbers[component][row]
         }
+        
+        setButton()
+        
     }
     
 }
