@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         picker.selectRow(startNumber - 1, inComponent: 0, animated: true)
         picker.selectRow(endNumber - 1, inComponent: 1, animated: true)
         
+        chooseButton.layer.cornerRadius = 15
+        chooseButton.setTitle("Choose number between \(startNumber) and \(endNumber)", for: .normal)
     }
 
     @IBAction func chooseButtonTapped(_ sender: UIButton) {
