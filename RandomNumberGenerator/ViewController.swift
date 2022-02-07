@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let numbers = [Array(1...100), Array(1...100)]
 
     //MARK: - Outlets
     
@@ -18,7 +20,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        picker.delegate = self
+        picker.dataSource = self
     }
 
     @IBAction func chooseButtonTapped(_ sender: UIButton) {
@@ -27,3 +31,22 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController: UIPickerViewDelegate {
+    
+}
+
+extension ViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return numbers.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return numbers[0].count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "\(numbers[component][row])"
+    }
+    
+    
+}
